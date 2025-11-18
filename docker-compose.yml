@@ -1,5 +1,5 @@
 services:
-  ros2:
+  ros:
     image: yolo_ros
     container_name: ros
     network_mode: host

@@ -1,12 +1,8 @@
-Steps to make the yolo_ros docker work:
+Steps to make the docker container work:
 
-git clone https://github.com/mgonzs13/yolo_ros/tree/main
-
-replace the Dockerfile with the one made by Jamie
+git clone https://github.com/mac785/ROS2-Dice-Roller
 
 run: docker build -t yolo_ros .
-
-Once built, move the docker-compose.yml made by Jamie to the folder
 
 run: docker compose exec ros bash
 
@@ -17,3 +13,7 @@ to echo the topic:
 
 to test the joysticks:
 	jstest /dev/input/js0
+
+to use buildkit and cached downloads:
+	DOCKER_BUILDKIT=1 docker build -t my_ros2_image .
+	

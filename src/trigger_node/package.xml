@@ -4,7 +4,7 @@
   <name>trigger_node</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="root@todo.todo">root</maintainer>
+  <maintainer email="moseley.jamie@gmail.com">jamie</maintainer>
   <license>TODO: License declaration</license>
 
   <depend>rclpy</depend>

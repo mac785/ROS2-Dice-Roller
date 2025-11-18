@@ -23,7 +23,8 @@ setup(
         ],
     },
     entry_points={
-        'console_scripts': [
+    'console_scripts': [
+            'trigger_node = trigger_node.trigger_node:main',
         ],
-    },
+    }
 )
