@@ -32,4 +32,7 @@ https://github.com/ros-controls/ros2_control_demos
 Dockerfile based on and requirements.txt sourced from yolo_ros by mgonzs13:  
 https://github.com/mgonzs13/yolo_ros
 
+Image dataset by Roboflow user Workspace (workspace-spezm):  
+https://universe.roboflow.com/workspace-spezm/dice-0sexk
+
 v4l-utils to find your camera info
