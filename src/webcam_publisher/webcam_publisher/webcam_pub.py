@@ -13,7 +13,7 @@ class WebcamPublisher(Node):
         self.timer = self.create_timer(1 / 30, self.timer_callback)  # ~30 FPS
 
         self.bridge = CvBridge()
-        self.cap = cv2.VideoCapture(0)  # Use camera 0, may need to change on other devices
+        self.cap = cv2.VideoCapture("/dev/usb_cam")  # Use camera 0, may need to change on other devices
 
         if not self.cap.isOpened():
             self.get_logger().error("Could not open webcam")

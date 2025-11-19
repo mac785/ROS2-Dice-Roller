@@ -22,7 +22,7 @@ RUN apt-get update
 RUN apt-get -y --quiet --no-install-recommends install python3 python3-pip
 RUN rosdep install --from-paths src --ignore-src -r -y
 RUN apt-get install ros-${ROS_DISTRO}-ros-gz -y
-RUN apt-get install ros-jazzy-gz-ros2-control ros-jazzy-gz-ros2-control-demos -y
+RUN apt-get install ros-jazzy-gz-ros2-control ros-jazzy-gz-ros2-control-demos ros-jazzy-ros2-controllers -y
 
 RUN if [ "$(lsb_release -rs)" = "24.04" ] || [ "$(lsb_release -rs)" = "24.10" ]; then \
     pip3 install -r src/requirements.txt --break-system-packages --ignore-installed; \
