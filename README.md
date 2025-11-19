@@ -1,5 +1,8 @@
 # ROS2-Dice-Roller
 
+Presentation link:  
+https://docs.google.com/presentation/d/17dWJg9Xzjme5_viVJAJSdn36DbBFt2w16UpQ6tVTV7M/edit?usp=sharing
+
 Download this package:  
 git clone https://github.com/mac785/ROS2-Dice-Roller
 
