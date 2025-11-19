@@ -45,7 +45,7 @@ class DiceDetector(Node):
 
             # Assuming your YOLO model class 0..5 matches dice face 1..6
             for cls in classes:
-                dice_sum += int(cls) + 1
+                dice_sum += 7 - (int(cls) + 1)
 
         # Publish dice sum
         msg_out = Int32()
