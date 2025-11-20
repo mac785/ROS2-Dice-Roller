@@ -32,5 +32,8 @@ RUN source /opt/ros/${ROS_DISTRO}/setup.bash && colcon build
 # Source the ROS 2 setup file
 RUN echo "source /root/ros2_ws/install/setup.bash" >> ~/.bashrc
 
+# Add the colored prompt for container sessions
+RUN echo 'export PS1="\[\e[1;35m\][CONTAINER:ros] \u@\h\[\e[0m\]:\[\e[1;33m\]\w\[\e[0m\]\$ "' >> ~/.bashrc
+
 # Run a default command, e.g., starting a bash shell
 CMD ["bash"]
