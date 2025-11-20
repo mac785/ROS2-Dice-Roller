@@ -1,4 +1,4 @@
-# ROS2-Dice-Roller
+# ROS2-Dicebot
 ## Team 12: [Tech-no Logic](https://youtu.be/D8K90hX4PrE?si=nYKRTUP4AQPTekIG)
 
 [Google Slides Presentation](https://docs.google.com/presentation/d/17dWJg9Xzjme5_viVJAJSdn36DbBFt2w16UpQ6tVTV7M/edit?usp=sharing)
