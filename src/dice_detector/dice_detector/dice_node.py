@@ -11,7 +11,7 @@ class DiceDetector(Node):
     def __init__(self):
         super().__init__('dice_detector')
 
-        # Load YOLO model (replace with your model path or Roboflow URL)
+        # Load YOLO model
         weights_path = "/root/yolo_models/dice.v1i.yolov8/runs/detect/train/weights/best.pt"
         self.model = YOLO(weights_path)
 
@@ -43,9 +43,8 @@ class DiceDetector(Node):
             scores = result.boxes.conf.cpu().numpy()  # confidence
             classes = result.boxes.cls.cpu().numpy()  # predicted class indices
 
-            # Assuming your YOLO model class 0..5 matches dice face 1..6
             for cls in classes:
-                dice_sum += 7 - (int(cls) + 1)
+                dice_sum += int(cls) + 1
 
         # Publish dice sum
         msg_out = Int32()
