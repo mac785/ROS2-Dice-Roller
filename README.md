@@ -10,9 +10,9 @@ https://docs.google.com/presentation/d/17dWJg9Xzjme5_viVJAJSdn36DbBFt2w16UpQ6tVT
 
 This project brings together 4 different systems inside ROS2 and Gazebo to control a simulated 2-wheel car all inside a docker container. The program can be broken down into 5 sections:  
 
-1. Camera and Computer Vision
-2. Joystick Control
-3. Sensor Interpretation and Command
+1. Camera and Computer Vision   
+2. Joystick Control  
+3. Sensor Interpretation and Command  
 4. Gazebo  
 5. Launch
 
@@ -37,7 +37,13 @@ Please see below for a simple explainer of each package by section
 
 ### RQT Graph
 
+<img width="3229" height="303" alt="Screenshot from 2025-11-19 22-00-56" src="https://github.com/user-attachments/assets/4e4446ca-efd9-49b4-b4f4-0b0960583707" />
 
+The above graph is labeled by group just as in the above section, with a color key below for clarification
+1. Camera and Computer Vision (Red)  
+2. Joystick Control (Blue)  
+3. Sensor Interpretation and Command (Green)  
+4. Gazebo (Orange)  
 
 ## Preparing the Docker Container
 
@@ -116,4 +122,4 @@ If your camera doesn't properly map, check your camera devices by using v4l-util
 ```
 v4l2-ctl --list-devices
 ```  
-Then, update line 8 of docker-compose.yml so that it maps your camera of choice to /dev/usb_cam
+Then, update line 8 of `docker-compose.yml` so that it maps your camera of choice to /dev/usb_cam
