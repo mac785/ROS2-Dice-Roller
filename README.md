@@ -96,17 +96,17 @@ ros2 launch my_robot_bringup my_robot_gazebo.launch.xml
 Once all nodes are online, roll some dice in front of the camera. Then, press directional buttons on the controller (D-Pad). This will move the robot.  
 | Direction | Action       |
 |-----------|-------------|
-| Up        | forwards    |
-| Down      | backwards  |
-| Left      | turn left  |
-| Right     | turn right |
+| Up        | Forwards    |
+| Down      | Backwards  |
+| Left      | Turn left  |
+| Right     | Turn right |
 
 
 The velocity of the robot is determined by the sum of the bottom faces of the dice (opposite of what's shown in the camera view). Roll a bunch of dice and see what happens!  
 
 ## References
 
-Dockerfile based on and requirements.txt sourced from [yolo_ros by mgonzs13](https://github.com/mgonzs13/yolo_ros)
+`Dockerfile` based on and `requirements.txt` sourced from [yolo_ros by mgonzs13](https://github.com/mgonzs13/yolo_ros)
 
 Image dataset [Dice by Roboflow user Workspace (workspace-spezm)](https://universe.roboflow.com/workspace-spezm/dice-0sexk)  
 
