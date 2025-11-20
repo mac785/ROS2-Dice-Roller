@@ -12,19 +12,27 @@ git clone https://github.com/mac785/ROS2-Dice-Roller
 Perform all following commands from inside the cloned repository
 
 Step 1: Build the image:  
-`docker build -t yolo_ros .`
+```
+docker build -t yolo_ros .
+```
 
 Once the image is build, launch the container:  
-`docker compose up -d`  
+```
+docker compose up -d
+```  
 (Note: you may need to adjust the contents of docker-compose.yml to accurately map camera and controller functionality)
 
 Once the container is launched, open a terminal with:  
-`docker compose exec ros bash`
+```
+docker compose exec ros bash
+```
 
 ## Running the Program
 
 Once inside the container, you can run the full project with:  
-`ros2 launch bringup full_system.launch.py`
+```
+ros2 launch bringup full_system.launch.py
+```
 
 Or, if you'd like to run each node individually:  
 
@@ -65,5 +73,7 @@ Image dataset [Dice by Roboflow user Workspace (workspace-spezm)](https://univer
 ## Debugging
 
 If your camera doesn't properly map, check your camera devices by using v4l-utils to find your camera info using the following command:  
-`v4l2-ctl --list-devices`  
+```
+v4l2-ctl --list-devices
+```  
 Then, update line 8 of docker-compose.yml so that it maps your camera of choice to /dev/usb_cam
