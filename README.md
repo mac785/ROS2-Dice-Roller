@@ -4,10 +4,47 @@
 Presentation link:  
 https://docs.google.com/presentation/d/17dWJg9Xzjme5_viVJAJSdn36DbBFt2w16UpQ6tVTV7M/edit?usp=sharing
 
-Download this package:  
-git clone https://github.com/mac785/ROS2-Dice-Roller
+## Project Overview
+
+### Package Overview
+
+This project brings together 4 different systems inside ROS2 and Gazebo to control a simulated 2-wheel car all inside a docker container. The program can be broken down into 5 sections:  
+
+1. Camera and Computer Vision
+2. Joystick Control
+3. Sensor Interpretation and Command
+4. Gazebo  
+5. Launch
+
+Please see below for a simple explainer of each package by section
+
+#### Camera and Computer Vision
+`webcam_publisher`: Reads webcam and publishes raw camera feed
+`dice_detector`: Uses a YOLO model to determine the value of all dice in the camera view, and then summs the opposite side (bottom side) values
+
+#### Joystick Control
+`dualsense_node`: interprets the data from the ROS2 built-in `joy_node` and simplifies/trims-down the data
+
+#### Sensor Interpretation and Command
+`trigger_node`: takes in sensor data and joystick inputs and publishes `/cmd_vel` to control the robot
+
+#### Gazebo
+`my_robot_description`: contains all the information to describe our robot for the simulator
+`my_robot_bringup`: contains all the instructions for launching the gazebo simulation properly with our robot
+
+#### Launch
+`bringup`: This simplifies simplifies things by making the entire program launch with one terminal command
+
+### RQT Graph
+
+
 
 ## Preparing the Docker Container
+
+Download this package:  
+```
+git clone https://github.com/mac785/ROS2-Dice-Roller
+```
 
 Perform all following commands from inside the cloned repository
 
@@ -57,10 +94,13 @@ ros2 launch my_robot_bringup my_robot_gazebo.launch.xml
 
 
 Once all nodes are online, roll some dice in front of the camera. Then, press directional buttons on the controller (D-Pad). This will move the robot.  
-Up: forwards  
-Down: backwards  
-Left: turn left  
-Right: turn right  
+| Direction | Action       |
+|-----------|-------------|
+| Up        | forwards    |
+| Down      | backwards  |
+| Left      | turn left  |
+| Right     | turn right |
+
 
 The velocity of the robot is determined by the sum of the bottom faces of the dice (opposite of what's shown in the camera view). Roll a bunch of dice and see what happens!  
 
