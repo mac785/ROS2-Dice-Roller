@@ -5,13 +5,10 @@ services:
     network_mode: host
     privileged: true
     devices:
-      #- "/dev/video0:/dev/usb_cam"
-      - "/dev/v4l/by-id/usb-046d_HD_Pro_Webcam_C920_4C48AFAF-video-index0:/dev/usb_cam" # Jamie's webcam by USB ID
+      - "/dev/video0:/dev/usb_cam"
       - "/dev/input/js0:/dev/input/js0" # map joystick device
       - "/dev/hidraw0:/dev/hidraw0" # map HID device
     volumes:
-      - ~/ros2_dice_ws:/ros2_ws
-      - ~/yolo_models:/yolo_models
       - /tmp/.X11-unix:/tmp/.X11-unix
     environment:
       - DISPLAY=${DISPLAY}
