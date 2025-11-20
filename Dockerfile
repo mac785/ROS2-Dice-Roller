@@ -8,12 +8,6 @@ SHELL ["/bin/bash", "-c"]
 # Copy only the src folder
 COPY src/ /root/ros2_ws/src/
 
-# Copy the pre-unzipped Panda_arm folder into the container
-# Assuming your local folder is named "Panda_arm"
-RUN mkdir -p /root/gazebo_models/panda_arm
-COPY panda_arm/ /root/gazebo_models/panda_arm/
-
-
 # Copy local yolo_models folder contents into container
 COPY yolo_models/ /root/yolo_models/
 
